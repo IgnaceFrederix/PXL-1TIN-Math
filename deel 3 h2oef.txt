@@ -1,0 +1,39 @@
+>function naarCijfer(tekst)...
+>v:=[];
+>for i=1 to strlen(tekst) step 1
+>hulp:=substring(tekst, i, i);
+>asc:=ascii(hulp)-ascii("a");
+>v:=v|asc;
+>end;
+>return v;
+>endfunction
+
+
+>function naarTekst(v) ...
+$tekst:="";
+$for i=1 to length(v) step 1
+$hulp:= v[i]+ascii("a");
+$tekst:=tekst|char(hulp);
+$end;
+$return tekst;
+$endfunction
+
+
+>function ceasar(v, sleutel) ...
+$     gecod:=[];
+$     for i=1 to length(v) step 1
+$       hulp:=v[i]+sleutel, 26);
+$       gecod:=gecod|hulp;
+$     end;
+$     return gecod;
+$  endfunction
+
+
+
+
+eulor
+floor(4,6)=>4
+ceil(4,6)=>5
+
+floor(-4,6)=>-5
+ceil(-4,6)=>-4
